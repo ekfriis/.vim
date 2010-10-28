@@ -76,3 +76,9 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/cute_python"]
+	path = bundle/cute_python
+	url = http://github.com/ehamberg/vim-cute-python.git
+[submodule "bundle/bisect"]
+	path = bundle/bisect
+	url = git://github.com/mikezackles/Bisect.git

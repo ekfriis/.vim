@@ -29,6 +29,7 @@ set visualbell
 set noerrorbells
 set wildmenu
 set wildmode=list:longest
+set wildignore=*.o,*.root,*.pyc,*.png,*.pdf,*.ps,*CVS/*
 set ignorecase
 set smartcase
 set scrolloff=3
@@ -48,9 +49,8 @@ set shiftwidth=2
 " For all text files set 'textwidth' to 78 characters.
 autocmd FileType text setlocal textwidth=78
 
-" Delete trailing whitespace before saving in cpp
-autocmd BufWritePre *.cc,*.h :%s/\s\+$//e
-
+" Delete trailing whitespace before saving in cpp and python
+autocmd BufWritePre *.cc,*.h,*py :%s/\s\+$//e
 
 " When editing a file, always jump to the last known cursor position.
 autocmd BufReadPost *
