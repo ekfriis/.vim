@@ -82,3 +82,9 @@
 [submodule "bundle/bisect"]
 	path = bundle/bisect
 	url = git://github.com/mikezackles/Bisect.git
+[submodule "bundle/hexHighlight"]
+	path = bundle/hexHighlight
+	url = git://github.com/vim-scripts/hexHighlight.vim.git
+[submodule "bundle/ColorX"]
+	path = bundle/ColorX
+	url = git://github.com/vim-scripts/ColorX.git
