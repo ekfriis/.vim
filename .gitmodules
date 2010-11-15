@@ -88,3 +88,6 @@
 [submodule "bundle/PickAColor"]
 	path = bundle/PickAColor
 	url = git://github.com/vim-scripts/PickAColor.vim.git
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = git://github.com/vim-scripts/molokai.git
