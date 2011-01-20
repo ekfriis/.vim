@@ -29,7 +29,7 @@ set visualbell
 set noerrorbells
 set wildmenu
 set wildmode=list:longest
-set wildignore=*.o,*.root,*.pyc,*.png,*.pdf,*.ps,*CVS/*
+set wildignore=*.o,*.root,*.pyc,*.png,*.pdf,*.ps,*CVS/*,*/lxbatch/*,*/crab/*,*/lxbatch_log/*
 set ignorecase
 set smartcase
 set scrolloff=3
