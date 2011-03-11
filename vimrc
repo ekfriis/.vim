@@ -17,8 +17,8 @@ set complete=.,w,b
 syntax on
 
 " Highlight last searched term
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 set hlsearch
 set hidden
 set autowrite
@@ -66,3 +66,11 @@ let NERDTreeWinSize=61
 let NERDTreeWinPos=0
 let NERDTreeChDirMode=2 "always set root as cwd
 let NERDTreeChristmasTree = 1
+
+let g:syntastic_auto_loc_list=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Don't use plaintex, but tex
+let g:tex_flavor='latex'

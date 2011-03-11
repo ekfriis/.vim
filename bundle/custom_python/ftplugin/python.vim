@@ -3,7 +3,7 @@
 
 " Basic Settings
 set number		" enable line numbering
-syntax on		" enable syntax highlighting
+"syntax on		" enable syntax highlighting
 " colorscheme wombat	" enable the wombat theme
 setlocal tabstop=4
 setlocal shiftwidth=4
