@@ -4,8 +4,8 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 " Don't mess up local directories
-set dir=~/Code/.vimCrap
-set backupdir=~/Code/.vimCrap
+set dir=~/.vimCrap
+set backupdir=~/.vimCrap
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
