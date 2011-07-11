@@ -1,4 +1,6 @@
-colorscheme wombat256mod
+"colorscheme wombat256mod
+colorscheme molokai
+set makeprg=~/scripts/make_at_ucd.py\ %:p:h
 
 set guioptions-=T " no toolbar
 set guioptions-=l " no scrollbars
@@ -14,5 +16,6 @@ set lines=62
 set columns=230
 set cursorline
 set cursorcolumn
+set colorcolumn=80
 set visualbell
 set noerrorbells
