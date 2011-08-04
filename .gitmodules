@@ -51,7 +51,7 @@
 	url = git://github.com/vim-scripts/SearchComplete.git
 [submodule "bundle/c.vim"]
 	path = bundle/c.vim
-	url = git://github.com/vim-scripts/c.vim.git
+	url = https://github.com/vim-scripts/c.vim.git
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = git://github.com/vim-scripts/taglist.vim.git
