@@ -122,3 +122,23 @@ endfunction
 au InsertEnter * call InsertStatuslineColor(v:insertmode)
 au InsertLeave * hi StatColor guibg=#95e454 guifg=black ctermbg=lightgreen ctermfg=black
 
+map \c" "+yi"
+map \c' "+yi'
+map \cW "+yiW
+map \cw "+yiw
+
+command! CondenseBlanks :%s/\n\{3,}/\r\r/e
+let $uw='/afs/hep.wisc.edu/home/efriis'
+
+func! WordProcessorMode() 
+  setlocal formatoptions=1 
+  setlocal noexpandtab 
+  map j gj 
+  map k gk 
+  setlocal smartindent 
+  setlocal spell spelllang=en_us 
+  setlocal wrap 
+  setlocal linebreak 
+  setlocal syntax=none 
+endfu 
+com! WP call WordProcessorMode() 
