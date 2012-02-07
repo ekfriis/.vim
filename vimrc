@@ -47,6 +47,11 @@ set autoindent		" always set autoindenting on
 set shiftwidth=2
 
 " For all text files set 'textwidth' to 78 characters.
+autocmd FileType tex setlocal wildignore-=*.pdf
+autocmd FileType tex setlocal wildignore-=*.png
+autocmd FileType tex :syntax spell toplevel
+
+" For all text files set 'textwidth' to 78 characters.
 autocmd FileType text setlocal textwidth=78
 
 " Delete trailing whitespace before saving in cpp and python
@@ -137,8 +142,16 @@ func! WordProcessorMode()
   map k gk 
   setlocal smartindent 
   setlocal spell spelllang=en_us 
-  setlocal wrap 
+  setlocal wrap  
   setlocal linebreak 
   setlocal syntax=none 
 endfu 
 com! WP call WordProcessorMode() 
+
+" Open a file in the same directory as the current file
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+"au! BufRead,BufNewFile *.json set filetype=json 
+
+" Turn jk into leaving insert mode
+imap jk <ESC>
