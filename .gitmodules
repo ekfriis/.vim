@@ -136,3 +136,9 @@
 [submodule "bundle/twilight256"]
 	path = bundle/twilight256
 	url = https://github.com/vim-scripts/twilight256.vim.git
+[submodule "bundle/twilight"]
+	path = bundle/twilight
+	url = https://github.com/vim-scripts/twilight.git
+[submodule "bundle/proton"]
+	path = bundle/proton
+	url = https://github.com/vim-scripts/proton.git
