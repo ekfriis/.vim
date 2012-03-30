@@ -50,6 +50,19 @@ set shiftwidth=2
 autocmd FileType tex setlocal wildignore-=*.pdf
 autocmd FileType tex setlocal wildignore-=*.png
 autocmd FileType tex :syntax spell toplevel
+autocmd FileType tex setlocal textwidth=10000
+autocmd FileType tex setlocal textwidth=10000
+autocmd FileType tex setlocal colorcolumn=10000
+
+" Always move by display lines
+nnoremap j gj
+nnoremap k gk
+nnoremap  0 g0
+nnoremap  $ g$
+vnoremap j gj
+vnoremap k gk
+vnoremap  0 g0
+vnoremap  $ g$
 
 " For all text files set 'textwidth' to 78 characters.
 autocmd FileType text setlocal textwidth=78
