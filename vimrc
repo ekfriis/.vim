@@ -10,6 +10,8 @@ set backupdir=~/.vim_crud
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set noswapfile
+
 "" Reduce autocomplete
 set complete=.,w,b
 
@@ -93,7 +95,7 @@ set statusline+=%*
 set laststatus=2
 set noerrorbells
 set vb t_vb=
-set spell
+set nospell
 set tw=80
 
 " Don't use plaintex, but tex
@@ -147,6 +149,9 @@ map \cw "+yiw
 
 command! CondenseBlanks :%s/\n\{3,}/\r\r/e
 let $uw='/afs/hep.wisc.edu/home/efriis'
+let $uwcms='/afs/hep.wisc.edu/cms/efriis'
+let $lxpwrk='/afs/cern.ch/work/f/friis'
+let $lxp='/afs/cern.ch/home/f/friis'
 
 func! WordProcessorMode() 
   setlocal formatoptions=1 
@@ -168,3 +173,5 @@ map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Turn jk into leaving insert mode
 imap jk <ESC>
+
+colo solarized

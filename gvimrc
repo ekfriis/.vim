@@ -19,3 +19,5 @@ set cursorcolumn
 set colorcolumn=80
 set visualbell
 set noerrorbells
+
+set spell
