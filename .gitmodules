@@ -96,7 +96,7 @@
 	url = git://github.com/vim-scripts/JSON.vim.git
 [submodule "bundle/drawit"]
 	path = bundle/drawit
-	url = git://github.com/vim-scripts/DrawIt.git
+	url = https://github.com/vim-scripts/DrawIt.git
 [submodule "bundle/argtexobj"]
 	path = bundle/argtexobj
 	url = git://github.com/vim-scripts/argtextobj.vim.git
@@ -145,3 +145,6 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/twiki"]
+	path = bundle/twiki
+	url = https://github.com/vim-scripts/TWiki-Syntax.git
