@@ -87,7 +87,15 @@ let NERDTreeWinPos=0
 let NERDTreeChDirMode=2 "always set root as cwd
 let NERDTreeChristmasTree = 1
 
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_signs=1
+
+let g:syntastic_mode_map = { 'mode': 'active',
+      \ 'active_filetypes': ['ruby', 'python', 'tex'],
+      \ 'passive_filetypes': ['cpp', 'c'] }
+
 set statusline=%t\ %m%r[%04l,%02c]
 set statusline+=\ \ %#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
