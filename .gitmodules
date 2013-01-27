@@ -148,3 +148,6 @@
 [submodule "bundle/twiki"]
 	path = bundle/twiki
 	url = https://github.com/vim-scripts/TWiki-Syntax.git
+[submodule "bundle/JavaScript-syntax"]
+	path = bundle/JavaScript-syntax
+	url = git://github.com/vim-scripts/JavaScript-syntax.git
