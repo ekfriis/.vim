@@ -121,9 +121,6 @@
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
-[submodule "bundle/vimoutliner"]
-	path = bundle/vimoutliner
-	url = https://github.com/vimoutliner/vimoutliner.git
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = https://github.com/vim-scripts/xoria256.vim.git
@@ -151,3 +148,6 @@
 [submodule "bundle/JavaScript-syntax"]
 	path = bundle/JavaScript-syntax
 	url = git://github.com/vim-scripts/JavaScript-syntax.git
+[submodule "bundle/JavaScript-Indent"]
+	path = bundle/JavaScript-Indent
+	url = git://github.com/vim-scripts/JavaScript-Indent.git
