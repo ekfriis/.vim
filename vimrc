@@ -93,8 +93,10 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_signs=1
 
 let g:syntastic_mode_map = { 'mode': 'active',
-      \ 'active_filetypes': ['ruby', 'python', 'tex', 'js'],
-      \ 'passive_filetypes': ['cpp', 'c'] }
+      \ 'active_filetypes': ['ruby', 'python',  'js'],
+      \ 'passive_filetypes': ['cpp', 'c', 'tex'] }
+
+let g:syntastic_javascript_checkers=['jshint']
 
 set statusline=%t\ %m%r[%04l,%02c]
 set statusline+=\ \ %#warningmsg#
@@ -160,6 +162,7 @@ let $uw='/afs/hep.wisc.edu/home/efriis'
 let $uwcms='/afs/hep.wisc.edu/cms/efriis'
 let $lxpwrk='/afs/cern.ch/work/f/friis'
 let $lxp='/afs/cern.ch/home/f/friis'
+
 
 func! WordProcessorMode() 
   setlocal formatoptions=1 
