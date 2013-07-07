@@ -185,4 +185,5 @@ map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Turn jk into leaving insert mode
 imap jk <ESC>
 
+set background=dark
 colo solarized
