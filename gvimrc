@@ -1,6 +1,4 @@
-"colorscheme wombat256mod
-colorscheme molokai
-set makeprg=~/scripts/make_at_ucd.py\ %:p:h
+colorscheme pyte
 
 set guioptions-=T " no toolbar
 set guioptions-=l " no scrollbars
