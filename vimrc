@@ -60,8 +60,7 @@ NeoBundleLazy 'nielsmadan/harlequin', { 'autoload' :
 
 
 " Light themes
-NeoBundleLazy 'vim-scripts/summerfruit256.vim', { 'autoload' :
-        \ { 'unite_sources' : 'colorscheme', }}
+NeoBundle 'vim-scripts/summerfruit256.vim'
 NeoBundleLazy 'joedicastro/vim-github256', { 'autoload' :
         \ { 'unite_sources' : 'colorscheme', }}
 NeoBundleLazy 'vim-scripts/pyte', { 'autoload' :
