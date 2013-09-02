@@ -74,6 +74,8 @@ NeoBundleLazy 'godlygeek/csapprox', { 'autoload' :
 
 " }}}
 
+colorscheme summerfruit256
+
 " HTML/CSS {{{
 
 " A smart and powerful Color Management tool. Needs to be loaded to be able
@@ -92,6 +94,15 @@ NeoBundleLazy 'othree/html5.vim', {'autoload':
 
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':
             \ {'filetypes': ['html', 'xhttml', 'css', 'xml', 'xls', 'markdown']}}
+" }}}
+
+" Linux tools {{{
+
+" A diff tool for directories
+NeoBundleLazy 'joedicastro/DirDiff.vim', { 'autoload': { 'commands' : 'DirDiff'}}
+" Hexadecimal editor
+NeoBundle 'Shougo/vinarise.vim'
+
 " }}}
 
 " Python {{{
