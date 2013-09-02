@@ -119,8 +119,8 @@ NeoBundleLazy 'alfredodeza/coveragepy.vim', {'autoload': {'filetypes': ['python'
 " }}}
 
 NeoBundle 'Shougo/vimfiler'
-NeoBundleLazy 'scrooloose/syntastic'
-autocmd FileType c,cpp,python,tex NeoBundleSource syntastic
+NeoBundleLazy 'scrooloose/syntastic', {'autoload':
+                        \{'filetypes': ['python', 'c', 'cpp', 'tex']}}
 
 " Text editing {{{
 
