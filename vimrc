@@ -155,9 +155,11 @@ NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
 NeoBundle 'bling/vim-airline'
 " Zooms a window
 NeoBundleLazy 'vim-scripts/zoomwintab.vim', {'autoload' :
-            \{'commands' : 'ZoomWinTabToggle'}}
+                        \{'commands' : 'ZoomWinTabToggle'}}
 " easily window resizing
-NeoBundle 'jimsei/winresizer'
+NeoBundle 'jimsei/winresizer', {'autoload' :
+                        \{'commands' : 'WinResizerStartResize'}}
+
 set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
 
 " }}}
