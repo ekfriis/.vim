@@ -166,6 +166,23 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
 
 " VIM Setup {{{ ===============================================================
 
+" Always show highlighted terms
+set hlsearch
+
+" In general, use a text width of 80
+set tw=79
+
+" Turn jk into leaving insert mode
+imap jk <ESC>
+
+" In general, make searches case insensitive
+set smartcase
+
+" Hide a bunch of junk
+set wildignore+=*.o,*.root,*.pyc,*.png,*.pdf,*.ps,
+set wildignore+=*CVS/*,*/lxbatch/*,*/crab/*,*/lxbatch_log/*
+set wildignore+=*.aux,*.fls,*.out,*.log,*.fdb_latexmk
+
 " Make a dir if no exists {{{
 
 function! MakeDirIfNoExists(path)
@@ -201,6 +218,7 @@ nnoremap <Leader>v <C-w>v
 nnoremap <Leader>h <C-w>s
 nnoremap <Leader>w :ZoomWinTabToggle<CR>
 nnoremap <Leader>W <C-w>o
+nnoremap <Leader>r :WinResizerStartResize<CR>
 
 " }}}
 
@@ -447,3 +465,12 @@ autocmd! BufWritePost vimrc source %
 
 " Installation check.
 NeoBundleCheck
+
+" Custom stuff {{{
+
+let $uw='/afs/hep.wisc.edu/home/efriis'
+let $uwcms='/afs/hep.wisc.edu/cms/efriis'
+let $lxpwrk='/afs/cern.ch/work/f/friis'
+let $lxp='/afs/cern.ch/home/f/friis'
+
+" }}}
