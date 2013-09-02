@@ -32,6 +32,7 @@ set noerrorbells
 set wildmenu
 set wildmode=list:longest
 set wildignore=*.o,*.root,*.pyc,*.png,*.pdf,*.ps,*CVS/*,*/lxbatch/*,*/crab/*,*/lxbatch_log/*
+set wildignore+=*.aux,*.fls,*.out,*.log,*.fdb_latexmk
 set ignorecase
 set smartcase
 set scrolloff=3
@@ -187,3 +188,15 @@ imap jk <ESC>
 
 set background=dark
 colo solarized
+
+function! TwiddleCase(str)
+  if a:str ==# toupper(a:str)
+    let result = tolower(a:str)
+  elseif a:str ==# tolower(a:str)
+    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+  else
+    let result = toupper(a:str)
+  endif
+  return result
+endfunction
+vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
