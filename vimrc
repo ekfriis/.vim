@@ -57,7 +57,8 @@ NeoBundleLazy 'sjl/badwolf', { 'autoload' :
         \ { 'unite_sources' : 'colorscheme', }}
 NeoBundleLazy 'nielsmadan/harlequin', { 'autoload' :
         \ { 'unite_sources' : 'colorscheme', }}
-
+NeoBundleLazy 'chriskempson/base16-vim', { 'autoload' :
+        \ { 'unite_sources' : 'colorscheme', }}
 
 " Light themes
 NeoBundle 'vim-scripts/summerfruit256.vim'
@@ -74,7 +75,12 @@ NeoBundleLazy 'godlygeek/csapprox', { 'autoload' :
 
 " }}}
 
-colorscheme summerfruit256
+" Markdown {{{
+" Markdown Syntax
+
+NeoBundle 'joedicastro/vim-markdown'
+
+" }}}
 
 " HTML/CSS {{{
 
@@ -121,6 +127,7 @@ NeoBundleLazy 'alfredodeza/coveragepy.vim', {'autoload': {'filetypes': ['python'
 NeoBundle 'Shougo/vimfiler'
 NeoBundleLazy 'scrooloose/syntastic', {'autoload':
                         \{'filetypes': ['python', 'c', 'cpp', 'tex']}}
+NeoBundle 'ervandew/supertab'
 
 " Text editing {{{
 
@@ -146,6 +153,9 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'Lokaltog/powerline-fonts'
 " Logic for absolute/relative line numbers
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
+" File Explorer
+NeoBundleLazy 'scrooloose/nerdtree', { 'autoload' :
+                        \ {'commands': ['NERDTree', 'NERDTreeToggle']}}
 
 " }}}
 
@@ -212,6 +222,13 @@ silent! call MakeDirIfNoExists(&directory)
 " No on likes tabs
 set expandtab
 
+" <Leader> & <LocalLeader> mapping {{{
+
+let mapleader=','
+let maplocalleader= ' '
+
+" }}}
+
 " New windows {{{
 
 nnoremap <Leader>v <C-w>v
@@ -221,6 +238,9 @@ nnoremap <Leader>W <C-w>o
 nnoremap <Leader>r :WinResizerStartResize<CR>
 
 " }}}
+
+" Open a file in the same directory as the current file
+nnoremap ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Fast window moves {{{
 
@@ -240,13 +260,6 @@ vnoremap j gj
 vnoremap k gk
 vnoremap  0 g0
 vnoremap  $ g$
-
-" <Leader> & <LocalLeader> mapping {{{
-
-let mapleader=','
-let maplocalleader= ' '
-
-" }}}
 
 " Show hidden chars {{{
 
@@ -300,11 +313,12 @@ augroup END
 " Airline {{{
 
 set noshowmode
-let g:airline_theme='powerlineish'
+let g:airline_theme='light'
 let g:airline_enable_branch=1
 let g:airline_powerline_fonts=1
 let g:airline_detect_whitespace = 1
 let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " }}}
 
@@ -386,6 +400,16 @@ let g:vimfiler_time_format = '%d-%m-%Y %H:%M:%S'
 let g:vimfiler_data_directory = $HOME.'/.vim/tmp/vimfiler'
 
 " }}}
+
+" NERDTree {{{
+
+nnoremap <silent><Leader>n :NERDTreeToggle<CR>
+let NERDTreeWinSize=61
+let NERDTreeWinPos=0
+let NERDTreeIgnore=['CVS', 'pyc$', '\.root$', 'pdf$', 'png$', '@Batch',
+                        \'xml.bak$', 'xml.fragment$']
+let NERDTreeChDirMode=2 "always set root as cwd
+let NERDTreeChristmasTree = 1
 
 " Unite {{{
 
@@ -473,4 +497,6 @@ let $uwcms='/afs/hep.wisc.edu/cms/efriis'
 let $lxpwrk='/afs/cern.ch/work/f/friis'
 let $lxp='/afs/cern.ch/home/f/friis'
 
+colorscheme summerfruit256
+        
 " }}}
