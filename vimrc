@@ -93,6 +93,7 @@ NeoBundleLazy 'Rykka/colorv.vim', {'autoload' : {
                              \ 'ColorVInsert', 'ColorVList', 'ColorVName',
                              \ 'ColorVScheme', 'ColorVSchemeFav',
                              \ 'ColorVSchemeNew', 'ColorVTurn2'],
+            \ 'filetypes': ['html', 'xhttml', 'css']
             \ }}
 
 NeoBundleLazy 'othree/html5.vim', {'autoload':
@@ -152,6 +153,7 @@ NeoBundle 'terryma/vim-multiple-cursors'
 " nice fonts
 NeoBundle 'Lokaltog/powerline-fonts'
 " Logic for absolute/relative line numbers
+let g:NumberToggleTrigger="<Ctrl-m>"
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
 " File Explorer
 NeoBundleLazy 'scrooloose/nerdtree', { 'autoload' :
@@ -179,6 +181,12 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
 " Always show highlighted terms
 set hlsearch
 
+" No on likes tabs
+set expandtab
+
+set incsearch		" do incremental searching
+set shiftwidth=4
+
 " In general, use a text width of 80
 set tw=79
 
@@ -186,10 +194,11 @@ set tw=79
 imap jk <ESC>
 
 " In general, make searches case insensitive
+set ignorecase
 set smartcase
 
 " Hide a bunch of junk
-set wildignore+=*.o,*.root,*.pyc,*.png,*.pdf,*.ps,
+set wildignore+=*.o,*.root,*.pyc,*.png,*.pdf,*.ps
 set wildignore+=*CVS/*,*/lxbatch/*,*/crab/*,*/lxbatch_log/*
 set wildignore+=*.aux,*.fls,*.out,*.log,*.fdb_latexmk
 
@@ -218,9 +227,6 @@ silent! call MakeDirIfNoExists(&backupdir)
 silent! call MakeDirIfNoExists(&directory)
 
 " }}}
-
-" No on likes tabs
-set expandtab
 
 " <Leader> & <LocalLeader> mapping {{{
 
@@ -418,7 +424,7 @@ nnoremap <silent><Leader>o :Unite -silent -start-insert file<CR>
 nnoremap <silent><Leader>O :Unite -silent -start-insert file_rec/async<CR>
 nnoremap <silent><Leader>m :Unite -silent file_mru<CR>
 " buffers
-nnoremap <silent><Leader>b :Unite -silent buffer<CR>
+nnoremap <silent><Leader>b :Unite -silent -start-insert buffer<CR>
 " tabs
 nnoremap <silent><Leader>B :Unite -silent tab<CR>
 " buffer search
